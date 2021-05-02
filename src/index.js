@@ -33,17 +33,20 @@ function App() {
   }
 
   return (
-    <div class="bg-purple-600 bg-opacity-75	">
-      <h1 class="font-semibold text-3xl  " >TODOs</h1>
-      <div>
-        {todos.map((todo, i) => {
-          return <Todo todo={todo} index={i} remove={removeTodo} key={i} />
-        })}
+    <main className="mt-16 mx-auto max-w-7xl px-4 sm:mt-24">
+      <div className="text-center">
 
-        < TodoForm addTodo={addTodo} />
+        <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">TODOs</h1>
+        <div>
+          {todos.map((todo, i) => {
+            return <Todo todo={todo} index={i} remove={removeTodo} key={i} />
+          })}
 
+          < TodoForm addTodo={addTodo} />
+
+        </div>
       </div>
-    </div>
+    </main>
   );
 }
 
